@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "viveros-el-maiten";
+  src:url("fonts/viveros-el-maiten.eot");
+  src:url("fonts/viveros-el-maiten.eot?#iefix") format("embedded-opentype"),
+    url("fonts/viveros-el-maiten.woff") format("woff"),
+    url("fonts/viveros-el-maiten.ttf") format("truetype"),
+    url("fonts/viveros-el-maiten.svg#viveros-el-maiten") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "viveros-el-maiten" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="dashicons-"]:before,
+[class*=" dashicons-"]:before {
+  font-family: "viveros-el-maiten" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dashicons-planta:before {
+  content: "\61";
+}
+.dashicons-variedad:before {
+  content: "\62";
+}
+.dashicons-portainjerto:before {
+  content: "\63";
+}
+.dashicons-dashboard:before {
+  content: "\64";
+}
+.dashicons-admin-media:before {
+  content: "\66";
+}
+.dashicons-admin-plugins:before {
+  content: "\68";
+}
+.dashicons-admin-users:before {
+  content: "\69";
+}
+.dashicons-admin-tools:before {
+  content: "\6c";
+}
+.dashicons-admin-appearance:before {
+  content: "\6a";
+}
+.dashicons-admin-settings:before {
+  content: "\6d";
+}
+.dashicons-admin-page:before {
+  content: "\67";
+}
+.dashicons-equipo:before {
+  content: "\6e";
+}
+.dashicons-servicios:before {
+  content: "\6b";
+}

@@ -1,0 +1,1164 @@
+/*Theme Name: Nature Boutique
+/*Theme URI:
+/*Author: asomic
+/*Author URI: https://asomic.com
+/*Description: Tema especialmente diseñado y desarrollado para Viveros El Maitén. Ciertos requerimientos dependen de algunos plugins desarrollados por asomic. Recomendamos no desactivarlos si este tema está activo.
+/*Version: 1.0
+/*License: GNU General Public License v2 or later
+/*License URI: http://www.gnu.org/licenses/gpl-2.0.html
+/*Text Domain: nboutique
+/*
+/*This theme, like WordPress, is licensed under the GPL.
+
+@import 'reset'
+
+// Colors
+$gray-soft: #F7F7F7
+$gray: #F4F4F4
+$gray-dark: #E3E3E3
+$blue-soft: #AAB0B1
+$blue-dark: #1F363D
+$green: #37A865
+$green-dark: #2E8A53
+$brown: #5A3A23
+
+//Mixins
+@mixin sans
+  font-family: 'Lato', sans-serif
+
+@mixin serif
+  font-family: 'Playfair Display', serif
+
+//Basics
+body
+  @include sans
+  color: $blue-dark
+  box-sizing: border-box
+
+//Typography
+h1, h2, h3, h4, h5, h6
+  @include serif
+  font-weight: 700
+
+p
+  @include sans
+  color: $blue-dark
+  font-weight: 300
+
+@media (min-width: 1200px)
+  p
+    font-size: 18px
+
+a
+  text-decoration: none
+  outline: none
+
+//Components
+.btn
+  background: $green
+  color: white
+  padding: 12px 26px
+  font-size: 14px
+  border-radius: 2px
+  line-height: normal
+  box-sizing: border-box
+  font-weight: 600
+  transition: all ease 0.4s
+  &:hover
+    background: $green-dark
+
+@media (min-width: 900px)
+  .btn
+    // font-size: 15px
+    padding: 14px 28px
+    &:hover
+
+.width
+  padding-left: 1.5em
+  padding-right: 1.5em
+
+@media (min-width: 768px)
+  .width
+    padding-left: 2.5em
+    padding-right: 2.5em
+
+@media (min-width: 900px)
+  .width
+    padding-left: 3.6em
+    padding-right: 3.6em
+
+@media (min-width: 1200px)
+  .width
+    padding-left: 0em
+    padding-right: 0em
+    margin-left: auto
+    margin-right: auto
+    max-width: 1010px
+
+@media (min-width: 1400px)
+  .width
+    max-width: 1040px
+
+@media (min-width: 1600px)
+  .width
+    max-width: 1140px
+
+.background-gray
+  background: $gray
+
+//Header
+header.site-header
+  background-color: $gray-soft
+  position: fixed
+  position: sticky
+  top: 0
+  width: 100%
+  z-index: 9999
+  .site-header-inner
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    align-items: center
+    align-content: center
+    padding-top: 0.8em
+    padding-bottom: 0.8em
+    .site-branding
+      a
+        img
+          width: 110px
+    button.hamburger
+      padding: 0
+      outline: none
+    nav.main-navigation
+      width: 100%
+      height: 0
+      overflow: hidden
+      transition: all ease 1s
+      .menu-container
+        padding-top: 0.5em
+        ul.the-menu
+          width: 100%
+          list-style: none
+          padding-left: 0
+          li.menu-item
+            margin-bottom: 14px
+            a
+              font-weight: 600
+              color: $blue-dark
+              transition: all ease 0.3s
+              &:hover
+                color: $blue-soft
+      &.toggle-menu
+        height: 180px
+
+@media (min-width: 768px)
+  header.site-header
+    .site-header-inner
+      padding-top: 1em
+      padding-bottom: 1em
+      // width: 100%
+      flex-wrap: nowrap
+      .site-branding
+        a
+          img
+            width: 130px
+      button.hamburger
+        display: none
+      nav.main-navigation
+        width: auto
+        height: 100%
+        overflow: visible
+        .menu-container
+          padding-top: 0
+          ul.the-menu
+            margin: 0
+            li.menu-item
+              display: inline-block
+              margin-bottom: 0
+              margin-left: 30px
+              a
+        &.toggle-menu
+
+@media (min-width: 900px)
+  header.site-header
+    .site-header-inner
+      padding-top: 1.2em
+      padding-bottom: 1.2em
+      .site-branding
+        a
+          img
+            width: 135px
+      button.hamburger
+      nav.main-navigation
+        .menu-container
+          ul.the-menu
+            li.menu-item
+              margin-left: 42px
+              a
+        &.toggle-menu
+
+@media (min-width: 1200px)
+  header.site-header
+    .site-header-inner
+      padding-top: 1.4em
+      padding-bottom: 1.4em
+      .site-branding
+        a
+          img
+      button.hamburger
+      nav.main-navigation
+        .menu-container
+          ul.the-menu
+            li.menu-item
+              a
+        &.toggle-menu
+
+@media (min-width: 1400px)
+  header.site-header
+    .site-header-inner
+      padding-top: 1.5em
+      padding-bottom: 1.5em
+      .site-branding
+        a
+          img
+      button.hamburger
+      nav.main-navigation
+        .menu-container
+          ul.the-menu
+            li.menu-item
+              a
+        &.toggle-menu
+
+//Slider
+.slider
+  width: 100%
+  height: 320px
+  background: $green
+
+@media (min-width: 768px)
+  .slider
+    height: 400px
+
+@media (min-width: 900px)
+  .slider
+    height: 460px
+
+@media (min-width: 1200px)
+  .slider
+    height: 480px
+
+@media (min-width: 1400px)
+  .slider
+    height: 510px
+
+@media (min-width: 1600px)
+  .slider
+    height: 550px
+
+//Products Select
+.products-select
+  padding-top: 0.5em
+  padding-bottom: 0.5em
+  .products-select-inner
+    .item
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 100%
+      height: 300px
+      margin: 1.5em 0
+      position: relative
+      overflow: hidden
+      background: $green
+      h4
+        font-style: italic
+        color: white
+        margin: 0
+        font-size: 30px
+        z-index: 2
+      .back
+        position: absolute
+        z-index: 1
+        width: 100%
+        height: 100%
+        background-position: center
+        background-size: cover
+        transition: all ease 0.4s
+      &:hover
+        .back
+          opacity: 0.3
+
+@media (min-width: 768px)
+  .products-select
+    padding-top: 2.7em
+    padding-bottom: 2.7em
+    .products-select-inner
+      display: flex
+      .item
+        margin: 0 0.5em
+        height: 320px
+        padding: 0 1em
+        &:first-child
+          margin-left: 0
+        &:last-child
+          margin-right: 0
+        h4
+          text-align: center
+          font-size: 27px
+        .back
+        &:hover
+          .back
+
+@media (min-width: 900px)
+  .products-select
+    padding-top: 3em
+    padding-bottom: 3em
+    .products-select-inner
+      .item
+        margin: 0 0.6em
+        padding: 0 1.8em
+        height: 430px
+        &:first-child
+        &:last-child
+        h4
+          font-size: 32px
+        .back
+        &:hover
+          .back
+
+@media (min-width: 1200px)
+  .products-select
+    .products-select-inner
+      .item
+        // margin: 0 0.6em
+        // padding: 0 1.8em
+        height: 450px
+        &:first-child
+        &:last-child
+        h4
+          font-size: 38px
+        .back
+        &:hover
+          .back
+
+@media (min-width: 1400px)
+  .products-select
+    .products-select-inner
+      .item
+        height: 465px
+        &:first-child
+        &:last-child
+        h4
+        .back
+        &:hover
+          .back
+
+@media (min-width: 1400px)
+  .products-select
+    .products-select-inner
+      .item
+        height: 490px
+        &:first-child
+        &:last-child
+        h4
+        .back
+        &:hover
+          .back
+
+//Service Showcase
+.showcase-service
+  .showcase-service-item
+    padding-top: 2.7em
+    padding-bottom: 3.7em
+    .img
+      width: 100%
+      height: 300px
+      background-position: center
+      margin-bottom: 20px
+    .data
+      h3
+        width: 80%
+        font-size: 32px
+        line-height: 127%
+        margin-top: 0
+        margin-bottom: 17px
+        color: $blue-dark
+      p
+        font-size: 17px
+        line-height: 140%
+        font-weight: 300
+        margin-bottom: 36px
+  &.with-background
+    background-color: $gray
+
+@media (min-width: 768px)
+  .showcase-service
+    .showcase-service-item
+      box-sizing: border-box
+      padding-top: 0
+      padding-bottom: 0
+      display: flex
+      justify-content: space-between
+      align-items: center
+      align-content: center
+      padding-top: 4em
+      padding-bottom: 4.5em
+      .img
+        width: 39%
+        height: 320px
+        margin-bottom: 0
+      .data
+        width: 54%
+        padding-bottom: 18px
+        h3
+        p
+    &.with-background
+      .img
+        order: 2
+      .data
+        order: 1
+
+@media (min-width: 900px)
+  .showcase-service
+    .showcase-service-item
+      padding-top: 5em
+      padding-bottom: 5.5em
+      .img
+        height: 420px
+      .data
+        h3
+          font-size: 40px
+          margin-bottom: 23px
+        p
+          font-size: 18px
+          margin-bottom: 40px
+          width: 90%
+    &.with-background
+      .img
+      .data
+
+@media (min-width: 1200px)
+  .showcase-service
+    .showcase-service-item
+      .img
+        height: 450px
+      .data
+        h3
+          font-size: 46px
+          margin-bottom: 26px
+        p
+          margin-bottom: 44px
+    &.with-background
+      .img
+      .data
+
+@media (min-width: 1400px)
+  .showcase-service
+    .showcase-service-item
+      .img
+        height: 470px
+      .data
+        h3
+        p
+    &.with-background
+      .img
+      .data
+
+@media (min-width: 1600px)
+  .showcase-service
+    .showcase-service-item
+      .img
+        width: 36%
+        height: 480px
+      .data
+        width: 50%
+        h3
+        p
+    &.with-background
+      .img
+      .data
+
+//Analisis
+.analisis
+  background: $gray
+  box-sizing: border-box
+  padding-top: 5em
+  padding-bottom: 5em
+  .analisis-inner
+    text-align: center
+    h3
+      font-size: 30px
+      color: $brown
+      margin-top: 0
+      margin-bottom: 23px
+    p
+      margin-bottom: 34px
+    .logos
+      display: flex
+      justify-content: space-between
+      box-sizing: border-box
+      flex-wrap: wrap
+      flex-direction: column
+      img
+        // display: block
+        margin: auto
+        height: 60%
+        margin-bottom: 28px
+        &:last-child
+          margin-bottom: 0
+
+@media (min-width: 768px)
+  .analisis
+    padding-top: 5.6em
+    padding-bottom: 5.6em
+    .analisis-inner
+      h3
+      p
+        width: 70%
+        margin-left: auto
+        margin-right: auto
+        margin-bottom: 42px
+      .logos
+        flex-wrap: nowrap
+        align-content: center
+        flex-direction: row
+        img
+          margin-bottom: 0
+          &:last-child
+
+@media (min-width: 900px)
+  .analisis
+    padding-top: 6.4em
+    padding-bottom: 6.4em
+    .analisis-inner
+      h3
+        font-size: 36px
+        margin-bottom: 28px
+      p
+        margin-bottom: 54px
+      .logos
+        flex-direction: row
+        margin: auto
+        width: 76%
+        img
+          &:last-child
+
+@media (min-width: 1200px)
+  .analisis
+    .analisis-inner
+      h3
+        font-size: 40px
+      p
+        width: 60%
+      .logos
+        width: 70%
+        img
+          &:last-child
+
+@media (min-width: 1400px)
+  .analisis
+    padding-top: 7em
+    padding-bottom: 7em
+    .analisis-inner
+      h3
+        // font-size: 40px
+      p
+        // width: 60%
+      .logos
+        // width: 78%
+        img
+          &:last-child
+
+//Single img
+.single-img
+  .single-img-inner
+    padding-top: 1.8em
+    padding-bottom: 1.7em
+    img
+      width: 100%
+
+@media (min-width: 768px)
+  .single-img
+    .single-img-inner
+      padding-top: 2.4em
+      padding-bottom: 2.4em
+      img
+
+@media (min-width: 900px)
+  .single-img
+    .single-img-inner
+      padding-top: 3em
+      padding-bottom: 3em
+      img
+
+//Footer
+.site-footer
+  background: $blue-dark
+  color: white
+  overflow: hidden
+  box-sizing: border-box
+  border-top: solid 6px $green
+  .site-footer-inner
+    @include sans
+    padding-top: 2.7em
+    padding-bottom: 2.5em
+    .nav-menus
+      display: flex
+      width: 100%
+      flex-wrap: wrap
+      justify-content: space-between
+      div
+        width: 46%
+        padding-left: 0
+        margin-bottom: 30px
+        h5
+          color: $green
+          margin: 0
+          @include sans
+          font-size: 16px
+          font-weight: 700
+          margin-bottom: 8px
+        a
+          display: block
+          color: white
+          font-size: 16px
+          margin-bottom: 7px
+          transition: all ease 0.4s
+          &:hover
+            color: $blue-soft
+    .data-footer
+      div
+        margin-bottom: 30px
+        padding-left: 0
+        h5
+          color: $green
+          margin: 0
+          @include sans
+          font-weight: 700
+          font-size: 16px
+          margin-bottom: 5px
+        p
+          margin: 0
+          line-height: 130%
+          margin-bottom: 5px
+          color: white
+        a
+          color: white
+          text-decoration: none
+          font-weight: 400
+          transition: all ease 0.4s
+          &:hover
+            color: $blue-soft
+    .credits
+      width: 100%
+      padding-top: 2.5em
+      p
+        text-align: center
+        color: $gray-soft
+        font-size: 14px
+        margin: 0
+        margin-bottom: 3px
+        img
+          display: inline-block
+          width: 22px
+          margin-right: 2px
+          vertical-align: -6px
+        a
+          color: white
+          font-weight: 400
+
+@media (min-width: 768px)
+  .site-footer
+    .site-footer-inner
+      padding-top: 3em
+      padding-bottom: 2.8em
+      .nav-menus
+        div
+          h5
+          a
+            &:hover
+      .data-footer
+        div
+          h5
+          p
+          a
+            &:hover
+      .credits
+        p
+          img
+          a
+
+@media (min-width: 900px)
+  .site-footer
+    .site-footer-inner
+      padding-top: 3.7em
+      padding-bottom: 3.2em
+      display: flex
+      flex-wrap: wrap
+      .nav-menus
+        width: 60%
+        display: flex
+        justify-content: flex-start
+        div
+          width: 28%
+          h5
+            margin-bottom: 9px
+          a
+            margin-bottom: 9px
+            &:hover
+      .data-footer
+        width: 40%
+        display: flex
+        flex-wrap: wrap
+        div
+          width: 50%
+          h5
+            margin-bottom: 9px
+          p
+          a
+            margin-bottom: 9px
+            &:hover
+      .credits
+        padding-top: 3.2em
+        width: 100%
+        display: flex
+        justify-content: space-between
+        p
+          margin-bottom: 0
+          line-height: 22px
+          img
+          a
+
+@media (min-width: 1200px)
+  .site-footer
+    .site-footer-inner
+      .nav-menus
+        div
+          h5
+          a
+            font-size: 15px
+            margin-bottom: 10px
+            &:hover
+      .data-footer
+        div
+          h5
+          p
+            font-size: 15px
+            line-height: 20px
+          a
+            font-size: 15px
+            margin-bottom: 10px
+            &:hover
+      .credits
+        p
+          img
+          a
+
+@media (min-width: 1400px)
+  .site-footer
+    .site-footer-inner
+      padding-bottom: 2.8em
+      .nav-menus
+        div
+          h5
+          a
+            &:hover
+      .data-footer
+        div
+          h5
+          p
+          a
+            &:hover
+      .credits
+        padding-top: 3.5em
+        p
+          img
+          a
+
+// Archive - Page - Template
+.header-page
+  width: 100%
+  .header-page-inner
+    text-align: center
+    width: 80%
+    margin-left: auto
+    margin-right: auto
+    padding: 50px 0 22px
+    h6
+      @include sans
+      font-size: 11px
+      line-height: 17px
+      letter-spacing: 0.3em
+      margin: 0
+      color: $blue-dark
+      margin-bottom: 12px
+    h3
+      font-size: 32px
+      margin: 0
+      color: $brown
+      margin-bottom: 20px
+    p
+      margin: 0
+      color: $blue-dark
+      font-size: 15px
+      line-height: 20px
+
+@media (min-width: 768px)
+  .header-page
+    .header-page-inner
+      padding: 72px 0 46px
+      width: 60%
+      h6
+      h3
+      p
+
+@media (min-width: 1024px)
+  .header-page
+    .header-page-inner
+      width: 40%
+      h6
+      h3
+      p
+
+// Plantas Items
+.plantas-items
+  padding-top: 24px
+  .plantas-items-inner
+    .item
+      margin-bottom: 32px
+      .img
+        width: 100%
+        height: 300px
+        background-position: center
+        background-size: cover
+      .data
+        padding: 20px 0
+        h4
+          color: $blue-dark
+          margin: 0
+          margin-bottom: 8px
+          font-size: 26px
+        h6
+          margin: 0
+          color: $green
+          @include sans
+          font-weight: 700
+          font-size: 15px
+          margin-bottom: 20px
+        p
+          margin: 0
+          font-size: 16px
+          line-height: 20px
+          margin-bottom: 16px
+        .features
+          .item
+            margin: 0
+            display: flex
+            p, b
+              margin: 0
+
+
+// Variedaes Items
+.var-items
+  padding-top: 24px
+  .var-items-inner
+    .item
+      margin-bottom: 32px
+      .img
+        width: 100%
+        height: 300px
+        background-position: center
+        background-size: cover
+      .data
+        padding: 20px 0
+        h4
+          color: $blue-dark
+          margin: 0
+          margin-bottom: 18px
+          font-size: 26px
+        .specific
+          .item
+            margin-bottom: 0
+            display: flex
+            p
+              margin: 0
+              font-size: 16px
+              line-height: 20px
+
+// Equipos
+.equipo
+  .equipo-inner
+    padding-top: 24px
+    .item
+      margin-bottom: 26px
+      .img
+        width: 100%
+        height: 350px
+        background-position: center
+        background-size: cover
+      .data
+        padding: 20px 0
+        h4
+          width: 80%
+          font-size: 26px
+          line-height: 127%
+          margin-top: 0
+          margin-bottom: 8px
+          color: $blue-dark
+        h6
+          margin: 0
+          color: $green
+          @include sans
+          font-weight: 700
+          font-size: 15px
+          margin-bottom: 0px
+        .contact
+          padding-top: 18px
+          a
+            color: $blue-dark
+            display: block
+            margin-bottom: 4px
+
+@media (min-width: 768px)
+  .equipo
+    padding-bottom: 28px
+    .equipo-inner
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+      .item
+        width: 47%
+        .img
+          height: 410px
+        .data
+          h4
+          h6
+          .contact
+            a
+
+@media (min-width: 1024px)
+  .equipo
+    // padding-bottom: 28px
+    .equipo-inner
+      display: grid
+      grid-template-columns: repeat(auto-fill, 31.3%)
+      grid-gap: 1rem
+      justify-content: space-between
+      .item
+        // width: 32%
+        width: 100%
+        .img
+          width: 100%
+          height: 360px
+        .data
+          width: 100%
+          h4
+          h6
+          .contact
+            a
+
+// CTA
+.cta
+  background-color: $gray
+  width: 100%
+  .cta-inner
+    width: 90%
+    margin-left: auto
+    margin-right: auto
+    padding-top: 46px
+    padding-bottom: 62px
+    text-align: center
+    box-sizing: border-box
+    h6
+      @include sans
+      font-size: 11px
+      line-height: 17px
+      letter-spacing: 0.3em
+      margin: 0
+      color: $blue-dark
+      margin-bottom: 12px
+    h1
+      font-size: 32px
+      margin: 0
+      color: $brown
+      margin-bottom: 20px
+    p
+      margin: 0
+      color: $blue-dark
+      font-size: 15px
+      line-height: 20px
+      margin-bottom: 32px
+
+// Contacto
+.contact
+  padding-top: 24px
+  .contact-inner
+    padding-top: 48px
+    padding-bottom: 40px
+    background: $gray
+    .contact-info
+      .item
+        margin-bottom: 34px
+        h6
+          margin: 0
+          @include sans
+          color: $green
+          font-weight: 700
+          font-size: 16px
+          margin-bottom: 8px
+        p
+          color: $blue-dark
+          margin: 0
+          line-height: 21px
+          font-size: 16px
+          margin-bottom: 6px
+          b
+            font-weight: 700
+          a
+            color: $blue-dark
+            font-weight: 700
+            word-break: keep-all
+    .contact-form
+      padding-top: 14px
+      form
+        .wpforms-field
+          padding: 0
+          padding-bottom: 12px
+          input, textarea
+            background: transparent
+            outline: none
+            border: solid 1px $blue-soft
+            box-shadow: transparent !important
+            -webkit-appearance: none
+            appearance: none
+            border-radius: 2px
+            transition: all ease 0.3s
+            &:focus
+              background: $gray-soft
+          input
+            padding: 20px 13px
+          textarea
+            padding: 10px 13px
+        .wpforms-submit-container
+          padding-top: 0
+          button
+            display: block
+            background: $green
+            color: white
+            font-weight: 700
+            outline: none
+            border: none
+            border-radius: 1px
+            padding: 12px 10px
+            width: 100%
+            transition: all ease 0.3s
+            &:focus, &:hover
+              background: $green-dark
+              border: none
+
+//Map
+.map
+  width: 100%
+  position: relative
+  box-sizing: border-box
+  overflow: hidden
+  .gmap_canvas
+    width: 100%
+    height: 300px
+    #gmap_canvas
+      width: 100%
+      height: 300px
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
