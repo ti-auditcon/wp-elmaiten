@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: url("AvenirLTStd-Book.eot");
+  src: url("AvenirLTStd-Book.eot?#iefix") format("embedded-opentype"), url("AvenirLTStd-Book.woff2") format("woff2"), url("AvenirLTStd-Book.woff") format("woff"), url("AvenirLTStd-Book.ttf") format("truetype"), url("AvenirLTStd-Book.svg#AvenirLTStd-Book") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: url("AvenirLTStd-Light.eot");
+  src: url("AvenirLTStd-Light.eot?#iefix") format("embedded-opentype"), url("AvenirLTStd-Light.woff2") format("woff2"), url("AvenirLTStd-Light.woff") format("woff"), url("AvenirLTStd-Light.ttf") format("truetype"), url("AvenirLTStd-Light.svg#AvenirLTStd-Light") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: url("AvenirLTStd-Medium.eot");
+  src: url("AvenirLTStd-Medium.eot?#iefix") format("embedded-opentype"), url("AvenirLTStd-Medium.woff2") format("woff2"), url("AvenirLTStd-Medium.woff") format("woff"), url("AvenirLTStd-Medium.ttf") format("truetype"), url("AvenirLTStd-Medium.svg#AvenirLTStd-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Leitura News Roman 1';
+  src: url("LeituraNews-Roman1.eot");
+  src: url("LeituraNews-Roman1.eot?#iefix") format("embedded-opentype"), url("LeituraNews-Roman1.woff2") format("woff2"), url("LeituraNews-Roman1.woff") format("woff"), url("LeituraNews-Roman1.ttf") format("truetype"), url("LeituraNews-Roman1.svg#LeituraNews-Roman1") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Leitura News Roman 4';
+  src: url("LeituraNews-Roman4.eot");
+  src: url("LeituraNews-Roman4.eot?#iefix") format("embedded-opentype"), url("LeituraNews-Roman4.woff2") format("woff2"), url("LeituraNews-Roman4.woff") format("woff"), url("LeituraNews-Roman4.ttf") format("truetype"), url("LeituraNews-Roman4.svg#LeituraNews-Roman4") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Leitura News Italic 1';
+  src: url("LeituraNews-Italic1.eot");
+  src: url("LeituraNews-Italic1.eot?#iefix") format("embedded-opentype"), url("LeituraNews-Italic1.woff2") format("woff2"), url("LeituraNews-Italic1.woff") format("woff"), url("LeituraNews-Italic1.ttf") format("truetype"), url("LeituraNews-Italic1.svg#LeituraNews-Italic1") format("svg");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Leitura News Italic 4';
+  src: url("LeituraNews-Italic4.eot");
+  src: url("LeituraNews-Italic4.eot?#iefix") format("embedded-opentype"), url("LeituraNews-Italic4.woff2") format("woff2"), url("LeituraNews-Italic4.woff") format("woff"), url("LeituraNews-Italic4.ttf") format("truetype"), url("LeituraNews-Italic4.svg#LeituraNews-Italic4") format("svg");
+  font-weight: normal;
+  font-style: italic; }

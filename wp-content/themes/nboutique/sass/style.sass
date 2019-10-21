@@ -57,8 +57,8 @@ a
 .btn
   background: $green
   color: white
-  padding: 12px 26px
-  font-size: 14px
+  padding: 11px 24px
+  font-size: 13px
   border-radius: 2px
   line-height: normal
   box-sizing: border-box
@@ -67,10 +67,16 @@ a
   &:hover
     background: $green-dark
 
-@media (min-width: 900px)
+@media (min-width: 768px)
+  .btn
+    padding: 12px 26px
+    &:hover
+
+@media (min-width: 1024px)
   .btn
     // font-size: 15px
-    padding: 14px 28px
+    padding: 13px 26px
+    font-size: 14px
     &:hover
 
 .width
@@ -156,7 +162,6 @@ header.site-header
     .site-header-inner
       padding-top: 1em
       padding-bottom: 1em
-      // width: 100%
       flex-wrap: nowrap
       .site-branding
         a
@@ -783,7 +788,7 @@ header.site-header
     width: 80%
     margin-left: auto
     margin-right: auto
-    padding: 50px 0 22px
+    padding: 50px 0 42px
     h6
       @include sans
       font-size: 11px
@@ -816,14 +821,17 @@ header.site-header
   .header-page
     .header-page-inner
       width: 40%
+      padding: 77px 0 58px
       h6
       h3
       p
 
 // Plantas Items
 .plantas-items
-  padding-top: 24px
+  // padding-top: 24px
+  padding-top: 6px
   .plantas-items-inner
+    padding-bottom: 21px
     .item
       margin-bottom: 32px
       .img
@@ -857,10 +865,46 @@ header.site-header
             p, b
               margin: 0
 
+@media (min-width: 768px)
+  .plantas-items
+    .plantas-items-inner
+      .item
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        align-items: center
+        .img
+          width: 40%
+          height: 340px
+        .data
+          width: 55%
+          h4
+          h6
+          p
+          .features
+            .item
+              p, b
+
+@media (min-width: 1024px)
+  .plantas-items
+    .plantas-items-inner
+      .item
+        .img
+          // width: 40%
+          height: 440px
+        .data
+          // width: 55%
+          h4
+          h6
+          p
+          .features
+            .item
+              p, b
+
 
 // Variedaes Items
 .var-items
-  padding-top: 24px
+  padding-top: 6px
   .var-items-inner
     .item
       margin-bottom: 32px
@@ -885,10 +929,42 @@ header.site-header
               font-size: 16px
               line-height: 20px
 
+@media (min-width: 768px)
+  .var-items
+    .var-items-inner
+      display: grid
+      grid-template-columns: repeat(auto-fill, 48%)
+      grid-gap: 1em
+      justify-content: space-between
+      .item
+        margin-bottom: 18px
+        .img
+          height: 390px
+        .data
+          h4
+          .specific
+            .item
+              p
+
+@media (min-width: 1024px)
+  .var-items
+    .var-items-inner
+      padding-bottom: 40px
+      grid-template-columns: repeat(auto-fill, 31.5%)
+      .item
+        margin-bottom: 18px
+        .img
+          height: 390px
+        .data
+          h4
+          .specific
+            .item
+              p
+
 // Equipos
 .equipo
   .equipo-inner
-    padding-top: 24px
+    padding-top: 6px
     .item
       margin-bottom: 26px
       .img
@@ -978,10 +1054,10 @@ header.site-header
       color: $blue-dark
       margin-bottom: 12px
     h1
-      font-size: 32px
+      font-size: 30px
       margin: 0
       color: $brown
-      margin-bottom: 20px
+      margin-bottom: 18px
     p
       margin: 0
       color: $blue-dark
@@ -989,13 +1065,42 @@ header.site-header
       line-height: 20px
       margin-bottom: 32px
 
+@media (min-width: 768px)
+  .cta
+    .cta-inner
+      padding-top: 65px
+      padding-bottom: 70px
+      width: 60%
+      margin-left: auto
+      margin-right: auto
+      h6
+      h1
+        font-size: 32px
+      p
+        font-size: 16px
+        margin-bottom: 38px
+
+@media (min-width: 1024px)
+  .cta
+    .cta-inner
+      padding-top: 90px
+      padding-bottom: 90px
+      h6
+      h1
+        font-size: 34px
+        margin-bottom: 20px
+      p
+        font-size: 17px
+        margin-bottom: 44px
+
 // Contacto
 .contact
-  padding-top: 24px
+  // padding-top: 24px
+  padding-top: 6px
+  background: $gray
   .contact-inner
     padding-top: 48px
     padding-bottom: 40px
-    background: $gray
     .contact-info
       .item
         margin-bottom: 34px
@@ -1056,6 +1161,85 @@ header.site-header
               background: $green-dark
               border: none
 
+@media (min-width: 768px)
+  .contact
+    .contact-inner
+      .contact-info
+        display: flex
+        .item
+          width: 50%
+          box-sizing: border-box
+          h6
+          p
+            b
+            a
+          &:first-child
+            padding-right: 10%
+      .contact-form
+        form
+          .wpforms-field
+            input, textarea
+              &:focus
+            input
+              width: 100%
+            textarea
+          .wpforms-field-container
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+          .wpforms-field-text
+            width: 49.2%
+            input
+              max-width: 100%
+          .wpforms-field-email
+            width: 49.2%
+            input
+              max-width: 100%
+          .wpforms-field-textarea
+            width: 100%
+          .wpforms-submit-container
+            button
+              &:focus, &:hover
+
+@media (min-width: 1024px)
+  .contact
+    .contact-inner
+      display: flex
+      padding-top: 48px
+      padding-bottom: 60px
+      .contact-info
+        flex-wrap: wrap
+        width: 38%
+        padding-right: 12px
+        box-sizing: border-box
+        .item
+          width: 100%
+          margin-bottom: 17px
+          h6
+          p
+            b
+            a
+          &:last-child
+            margin-bottom: 0
+      .contact-form
+        padding-top: 0
+        width: 62%
+        form
+          .wpforms-field
+            input, textarea
+              &:focus
+            input
+            textarea
+          .wpforms-field-container
+          .wpforms-field-text
+            input
+          .wpforms-field-email
+            input
+          .wpforms-field-textarea
+          .wpforms-submit-container
+            button
+              &:focus, &:hover
+
 //Map
 .map
   width: 100%
@@ -1068,6 +1252,14 @@ header.site-header
     #gmap_canvas
       width: 100%
       height: 300px
+
+@media (min-width: 1024px)
+  .map
+    .gmap_canvas
+      height: 380px
+      #gmap_canvas
+        width: 100%
+        height: 380px
 //
 //
 //
