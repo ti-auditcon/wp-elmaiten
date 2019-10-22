@@ -18,53 +18,55 @@ get_header();
 	</div>
 </section>
 
+<?php
+		$images1 = rwmb_meta( 'image_advanced_1', array( 'size' => 'full' ) );
+		foreach ( $images1 as $image ) {
+			$image1 = $image['url'];
+		}
+		$titulo1 = rwmb_meta( 'text_1' );
+		$texto1 = rwmb_meta( 'textarea_1' );
+
+		$images2 = rwmb_meta( 'image_advanced_2', array( 'size' => 'full' ) );
+		foreach ( $images2 as $image ) {
+			$image2 = $image['url'];
+		}
+		$titulo2 = rwmb_meta( 'text_2' );
+		$texto2 = rwmb_meta( 'textarea_2' );
+
+		$images3 = rwmb_meta( 'image_advanced_3', array( 'size' => 'full' ) );
+		foreach ( $images3 as $image ) {
+			$image3 = $image['url'];
+		}
+		$titulo3 = rwmb_meta( 'text_3' );
+		$texto3 = rwmb_meta( 'textarea_3' );
+?>
+
 <div class="showcase-service">
 	<div class="showcase-service-item width">
-		<div class="img" style="background-image: url('<?php bloginfo('template_url') ?>/img/green.jpg')"></div>
+		<div class="img" style="background-image: url('<?php echo $image1 ?>')"></div>
 		<div class="data">
-			<h3>
-				Revisión del lugar a plantar
-			</h3>
-			<p>
-				Duis non molestie odio. Fusce lacinia nisi ipsum, vel sodales lorem convallis commodo. Sed at convallis libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus elementum consectetur vestibulum. In hac habitasse platea dictumst. Nulla tempus nulla ac sem maximus, nec pellentesque tellus tempor.
-			</p>
-			<a href="/" class="btn">
-				Más Información
-			</a>
+			<h3><?php echo $titulo1; ?></h3>
+			<p><?php echo $texto1; ?></p>
 		</div>
 	</div>
 </div>
 
 <div class="showcase-service with-background">
 	<div class="showcase-service-item width">
-		<div class="img" style="background-image: url('<?php bloginfo('template_url') ?>/img/green.jpg')"></div>
+		<div class="img" style="background-image: url('<?php echo $image2 ?>')"></div>
 		<div class="data">
-			<h3>
-				Checklist previo a entrega
-			</h3>
-			<p>
-				Duis non molestie odio. Fusce lacinia nisi ipsum, vel sodales lorem convallis commodo. Sed at convallis libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus elementum consectetur vestibulum. In hac habitasse platea dictumst. Nulla tempus nulla ac sem maximus, nec pellentesque tellus tempor.
-			</p>
-			<a href="/" class="btn">
-				Más Información
-			</a>
+			<h3><?php echo $titulo2; ?></h3>
+			<p><?php echo $texto2; ?></p>
 		</div>
 	</div>
 </div>
 
 <div class="showcase-service">
 	<div class="showcase-service-item width">
-		<div class="img" style="background-image: url('<?php bloginfo('template_url') ?>/img/green.jpg')"></div>
+		<div class="img" style="background-image: url('<?php echo $image3 ?>')"></div>
 		<div class="data">
-			<h3>
-				Revisión post plantación
-			</h3>
-			<p>
-				Duis non molestie odio. Fusce lacinia nisi ipsum, vel sodales lorem convallis commodo. Sed at convallis libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus elementum consectetur vestibulum. In hac habitasse platea dictumst. Nulla tempus nulla ac sem maximus, nec pellentesque tellus tempor.
-			</p>
-			<a href="/" class="btn">
-				Más Información
-			</a>
+			<h3><?php echo $titulo3; ?></h3>
+			<p><?php echo $texto3; ?></p>
 		</div>
 	</div>
 </div>

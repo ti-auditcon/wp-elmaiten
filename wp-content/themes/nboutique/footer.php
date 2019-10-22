@@ -27,9 +27,9 @@
 				</div>
 				<div>
 					<h5>Productos</h5>
-					<a href="#">Portainjertos</a>
-					<a href="#">Tipos de Plantas</a>
-					<a href="#">Variedades</a>
+					<a href="/portainjerto">Portainjertos</a>
+					<a href="/plantas">Tipos de Plantas</a>
+					<a href="/variedades">Variedades</a>
 				</div>
 				<div>
 					<h5>El Servicio</h5>

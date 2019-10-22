@@ -183,7 +183,6 @@ function variedades_post_type() {
 add_action( 'init', 'variedades_post_type', 0 );
 
 // Servicios Post Type
-// Register Custom Post Type
 function servicios_post_type() {
 
 	$labels = array(
@@ -219,8 +218,8 @@ function servicios_post_type() {
 		'label'                 => __( 'Servicio', 'nboutique' ),
 		'description'           => __( 'Servicios para mostar en el sitio web', 'nboutique' ),
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor', 'thumbnail', 'revisions' ),
-		'taxonomies'            => array( 'category', 'post_tag' ),
+		'supports'              => array( 'title', 'revisions' ),
+		'taxonomies'            => array(  ),
 		'hierarchical'          => true,
 		'public'                => true,
 		'show_ui'               => true,
