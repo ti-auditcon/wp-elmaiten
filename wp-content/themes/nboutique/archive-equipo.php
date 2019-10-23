@@ -18,6 +18,12 @@ get_header();
 	</div>
 </section>
 
+<div class="equipo-img">
+	<div class="equipo-img-inner width">
+		<img src="<?php bloginfo('template_url') ?>/img/green.jpg">
+	</div>
+</div>
+
 <section class="equipo">
 	<div class="equipo-inner width">
 

@@ -21,130 +21,33 @@ get_header();
 <section class="var-items">
 	<div class="var-items-inner width">
 
-		<div class="item">
-			<div class="img" style="background-image: url('<?php bloginfo('template_url') ?>/img/green.jpg')"></div>
-			<div class="data">
-				<h4>Lapins</h4>
-				<div class="specific">
-					<div class="item">
-						<p>Color</p>
-						<p>Caoba</p>
-					</div>
-					<div class="item">
-						<p>Floración</p>
-						<p>---</p>
-					</div>
-					<div class="item">
-						<p>Cosecha</p>
-						<p>Desde el 25 de Noviembre</p>
-					</div>
-					<div class="item">
-						<p>Pulpa</p>
-						<p>Firme</p>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="item">
-			<div class="img" style="background-image: url('<?php bloginfo('template_url') ?>/img/green.jpg')"></div>
-			<div class="data">
-				<h4>Santina</h4>
-				<div class="specific">
-					<div class="item">
-						<p>Color</p>
-						<p>Caoba</p>
-					</div>
-					<div class="item">
-						<p>Floración</p>
-						<p>---</p>
-					</div>
-					<div class="item">
-						<p>Cosecha</p>
-						<p>Desde el 25 de Noviembre</p>
-					</div>
-					<div class="item">
-						<p>Pulpa</p>
-						<p>Firme</p>
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+			<div class="item">
+				<div class="img" style="background-image: url('<?php the_post_thumbnail_url(); ?>')"></div>
+				<div class="data">
+					<h4><?php the_title(); ?></h4>
+					<div class="specific">
+						<div class="item">
+							<p><b>Floración:</b></p>
+							<p><?php echo get_post_meta( $post->ID, 'caractersticas_floracin', true ) ?></p>
+						</div>
+						<div class="item">
+							<p><b>Cosecha:</b></p>
+							<p><?php echo get_post_meta( $post->ID, 'caractersticas_cosecha', true ) ?></p>
+						</div>
+						<div class="item">
+							<p><b>Fruto:</b></p>
+							<p><?php echo get_post_meta( $post->ID, 'caractersticas_fruto', true ) ?></p>
+						</div>
+						<div class="item">
+							<p><b>Polonizantes:</b></p>
+							<p><?php echo get_post_meta( $post->ID, 'caractersticas_polonizantes', true ) ?></p>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-
-		<div class="item">
-			<div class="img" style="background-image: url('<?php bloginfo('template_url') ?>/img/green.jpg')"></div>
-			<div class="data">
-				<h4>Regina</h4>
-				<div class="specific">
-					<div class="item">
-						<p>Color</p>
-						<p>Caoba</p>
-					</div>
-					<div class="item">
-						<p>Floración</p>
-						<p>---</p>
-					</div>
-					<div class="item">
-						<p>Cosecha</p>
-						<p>Desde el 25 de Noviembre</p>
-					</div>
-					<div class="item">
-						<p>Pulpa</p>
-						<p>Firme</p>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="item">
-			<div class="img" style="background-image: url('<?php bloginfo('template_url') ?>/img/green.jpg')"></div>
-			<div class="data">
-				<h4>Skeena</h4>
-				<div class="specific">
-					<div class="item">
-						<p>Color</p>
-						<p>Caoba</p>
-					</div>
-					<div class="item">
-						<p>Floración</p>
-						<p>---</p>
-					</div>
-					<div class="item">
-						<p>Cosecha</p>
-						<p>Desde el 25 de Noviembre</p>
-					</div>
-					<div class="item">
-						<p>Pulpa</p>
-						<p>Firme</p>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="item">
-			<div class="img" style="background-image: url('<?php bloginfo('template_url') ?>/img/green.jpg')"></div>
-			<div class="data">
-				<h4>Kordia</h4>
-				<div class="specific">
-					<div class="item">
-						<p>Color</p>
-						<p>Caoba</p>
-					</div>
-					<div class="item">
-						<p>Floración</p>
-						<p>---</p>
-					</div>
-					<div class="item">
-						<p>Cosecha</p>
-						<p>Desde el 25 de Noviembre</p>
-					</div>
-					<div class="item">
-						<p>Pulpa</p>
-						<p>Firme</p>
-					</div>
-				</div>
-			</div>
-		</div>
+	<?php endwhile; else : ?>
+	<?php endif; ?>
 
 	</div>
 </section>

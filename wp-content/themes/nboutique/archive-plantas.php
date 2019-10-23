@@ -21,27 +21,39 @@ get_header();
 <section class="plantas-items">
 	<div class="plantas-items-inner width">
 
-		<div class="item">
-			<div class="img" style="background-image: url('<?php bloginfo('template_url') ?>/img/green.jpg')"></div>
-			<div class="data">
-				<h4>Portainjerto</h4>
-				<h6>Raíz Desnuda</h6>
-				<p>In hac habitasse platea dictumst. Donec commodo erat sit amet porttitor egestas. Donec eget feugiat tortor.</p>
-				<div class="features">
-					<div class="item">
-						<p><b>Solo Portainjerto</b></p>
-						<p>Base (diámetro y altuyra) según portainjerto</p>
-					</div>
-					<div class="item">
-						<p><b>Injerto en terreno</b></p>
-						<p>Base (diámetro y altuyra) según portainjerto</p>
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+			<div class="item">
+				<div class="img" style="background-image: url('<?php the_post_thumbnail_url(); ?>')"></div>
+				<div class="data">
+					<h4><?php the_title(); ?></h4>
+					<h6><?php echo get_post_meta( $post->ID, 'especificaciones_tipo-de-entrega', true ) ?></h6>
+					<p><?php echo get_post_meta( $post->ID, 'especificaciones_descripcin', true ) ?></p>
+					<div class="features">
+						<div class="item">
+							<p>
+								<b>Fecha de Reserva:</b>
+								<?php echo get_post_meta( $post->ID, 'especificaciones_fecha-de-reserva', true ) ?>
+							</p>
+						</div>
+						<div class="item">
+							<p>
+								<b>Fecha de Entrega:</b>
+								<?php echo get_post_meta( $post->ID, 'especificaciones_fecha-de-entrega', true ) ?>
+							</p>
+						</div>
+						<div class="wpeditor">
+							<p>
+								<?php echo get_post_meta( $post->ID, 'especificaciones_detalles', true ) ?>
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		<?php endwhile; else : ?>
+		<?php endif; ?>
 
-		<div class="item">
-			<div class="img" style="background-image: url('<?php bloginfo('template_url') ?>/img/green.jpg')"></div>
+		<!-- <div class="item">
+			<div class="img" style="background-image: url('/img/green.jpg')"></div>
 			<div class="data">
 				<h4>Planta terminada</h4>
 				<h6>Raíz Desnuda</h6>
@@ -61,7 +73,7 @@ get_header();
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 
 	</div>
 </section>

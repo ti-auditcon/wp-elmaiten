@@ -204,13 +204,13 @@ header.site-header
                 left: -14px
                 width: 130px
                 margin: 0
-                padding: 16px 14px 8px
+                padding: 16px 14px 6px
                 border-radius: 2px
                 transition: all ease 0.4s
                 li
                   display: block
                   margin-left: 0
-                  margin-bottom: 10px
+                  margin-bottom: 12px
                   padding-top: 0px
                   padding-bottom: 0px
                   a
@@ -234,8 +234,9 @@ header.site-header
         .menu-container
           ul.the-menu
             li.menu-item
-              margin-left: 42px
+              margin-left: 44px
               a
+                font-size: 15px
         &.toggle-menu
 
 @media (min-width: 1200px)
@@ -251,6 +252,7 @@ header.site-header
         .menu-container
           ul.the-menu
             li.menu-item
+              margin-left: 50px
               a
         &.toggle-menu
 
@@ -451,6 +453,9 @@ header.site-header
         padding-bottom: 18px
         h3
         p
+        &.no-button
+          p
+            margin-bottom: 0
     &.with-background
       .img
         order: 2
@@ -466,7 +471,7 @@ header.site-header
         height: 420px
       .data
         h3
-          font-size: 40px
+          font-size: 38px
           margin-bottom: 23px
         p
           font-size: 18px
@@ -483,7 +488,7 @@ header.site-header
         height: 450px
       .data
         h3
-          font-size: 46px
+          font-size: 42px
           margin-bottom: 26px
         p
           margin-bottom: 44px
@@ -627,6 +632,29 @@ header.site-header
   .single-img
     .single-img-inner
       padding-top: 3em
+      padding-bottom: 3em
+      img
+
+
+//Equipo img
+.equipo-img
+  .equipo-img-inner
+    // padding-top: 1.8em
+    padding-bottom: 1.7em
+    img
+      width: 100%
+
+@media (min-width: 768px)
+  .equipo-img
+    .equipo-img-inner
+      // padding-top: 2.4em
+      padding-bottom: 2.4em
+      img
+
+@media (min-width: 900px)
+  .equipo-img
+    .equipo-img-inner
+      // padding-top: 3em
       padding-bottom: 3em
       img
 
@@ -851,13 +879,14 @@ header.site-header
       h3
       p
 
-@media (min-width: 1024px)
+@media (min-width: 900px)
   .header-page
     .header-page-inner
       width: 40%
       padding: 77px 0 58px
       h6
       h3
+        font-size: 38px
       p
 
 @media (min-width: 1200px)
@@ -866,13 +895,22 @@ header.site-header
       // width: 40%
       padding: 77px 0 62px
       h6
-        font-size: 12px
-        margin-bottom: 12px
+        font-size: 13px
+        margin-bottom: 13px
       h3
-        font-size: 38px
-        margin-bottom: 25px
+        font-size: 42px
+        margin-bottom: 23px
       p
-        font-size: 16px
+        font-size: 17px
+        line-height: 140%
+
+@media (min-width: 1400px)
+  .header-page
+    .header-page-inner
+      width: 30%
+      h6
+      h3
+      p
 
 // Plantas Items
 .plantas-items
@@ -910,8 +948,31 @@ header.site-header
           .item
             margin: 0
             display: flex
+            flex-wrap: wrap
+            margin-bottom: 12px
             p, b
+              width: 100%
               margin: 0
+            b
+              font-weight: 700
+          .wpeditor
+            p
+            ul
+              margin-left: 0
+              padding-left: 0
+              line-height: 130%
+              li
+                width: 100%
+                display: inline-block
+                font-weight: 300
+                font-size: 16px
+                line-height: 20px
+                margin-bottom: 10px
+                b, strong
+                  font-weight: 700
+
+
+
 
 @media (min-width: 768px)
   .plantas-items
@@ -953,7 +1014,20 @@ header.site-header
             margin-bottom: 24px
           .features
             .item
+              flex-wrap: nowrap
+              justify-content: flex-start
               p, b
+                width: auto
+                &:first-child
+                  margin-right: 6px
+            .wpeditor
+              p
+              ul
+                li
+                  font-size: 17px
+                  line-height: 130%
+                  margin-bottom: 14px
+                  b, strong
 
 @media (min-width: 1200px)
   .plantas-items
@@ -992,12 +1066,17 @@ header.site-header
           font-size: 26px
         .specific
           .item
-            margin-bottom: 0
+            margin-bottom: 2px
             display: flex
             p
               margin: 0
               font-size: 16px
               line-height: 20px
+              &:first-child
+                margin-right: 6px
+                // width: 20%
+              b
+                font-weight: 700
 
 @media (min-width: 768px)
   .var-items
@@ -1029,7 +1108,12 @@ header.site-header
           h4
           .specific
             .item
+              margin-bottom: 4px
               p
+                &:first-child
+                  margin-right: 6px
+                // b
+                //   font-weight: 700
 
 @media (min-width: 1200px)
   .var-items

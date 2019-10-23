@@ -44,7 +44,7 @@ get_header();
 <div class="showcase-service">
 	<div class="showcase-service-item width">
 		<div class="img" style="background-image: url('<?php echo $image1 ?>')"></div>
-		<div class="data">
+		<div class="data no-button">
 			<h3><?php echo $titulo1; ?></h3>
 			<p><?php echo $texto1; ?></p>
 		</div>
@@ -54,7 +54,7 @@ get_header();
 <div class="showcase-service with-background">
 	<div class="showcase-service-item width">
 		<div class="img" style="background-image: url('<?php echo $image2 ?>')"></div>
-		<div class="data">
+		<div class="data no-button">
 			<h3><?php echo $titulo2; ?></h3>
 			<p><?php echo $texto2; ?></p>
 		</div>
@@ -64,7 +64,7 @@ get_header();
 <div class="showcase-service">
 	<div class="showcase-service-item width">
 		<div class="img" style="background-image: url('<?php echo $image3 ?>')"></div>
-		<div class="data">
+		<div class="data no-button">
 			<h3><?php echo $titulo3; ?></h3>
 			<p><?php echo $texto3; ?></p>
 		</div>

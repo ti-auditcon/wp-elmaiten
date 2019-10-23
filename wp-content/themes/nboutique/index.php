@@ -45,7 +45,7 @@ get_header();
 				<p>
 					Duis non molestie odio. Fusce lacinia nisi ipsum, vel sodales lorem convallis commodo. Sed at convallis libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus elementum consectetur vestibulum. In hac habitasse platea dictumst. Nulla tempus nulla ac sem maximus, nec pellentesque tellus tempor.
 				</p>
-				<a href="/" class="btn">
+				<a href="/servicios/acompanamiento-en-la-venta/" class="btn">
 					Más Información
 				</a>
 			</div>
@@ -62,7 +62,7 @@ get_header();
 				<p>
 					Duis non molestie odio. Fusce lacinia nisi ipsum, vel sodales lorem convallis commodo. Sed at convallis libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus elementum consectetur vestibulum. In hac habitasse platea dictumst. Nulla tempus nulla ac sem maximus, nec pellentesque tellus tempor.
 				</p>
-				<a href="/" class="btn">
+				<a href="/servicios/post-venta/" class="btn">
 					Más Información
 				</a>
 			</div>
@@ -71,7 +71,7 @@ get_header();
 
 	<section class="analisis">
 		<div class="analisis-inner width">
-			<h3>Título pendiente</h3>
+			<h3>Antecedentes de nuestras plantas</h3>
 			<p>
 				Etiam semper rhoncus diam, et gravida massa volutpat id. In tempus nunc in purus tristique commodo.
 			</p>
