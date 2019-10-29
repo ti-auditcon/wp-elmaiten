@@ -77,3 +77,6 @@
 .dashicons-servicios:before {
   content: "\6b";
 }
+.dashicons-diapositivas:before {
+  content: "\65";
+}

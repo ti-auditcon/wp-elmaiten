@@ -46,7 +46,7 @@ function portainjertos_post_type() {
 		'description'           => __( 'Portainjertos disponibles para mostrar en el sitio web', 'nboutique' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'thumbnail', 'revisions' ),
-		'taxonomies'            => array( 'category', 'post_tag' ),
+		// 'taxonomies'            => array(  ),
 		'hierarchical'          => true,
 		'public'                => true,
 		'show_ui'               => true,
@@ -104,7 +104,7 @@ function plantas_post_type() {
 		'description'           => __( 'Tipos de Plantas para mostrar en el sitio web', 'nboutique' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'thumbnail', 'revisions' ),
-		'taxonomies'            => array( 'category', 'post_tag' ),
+		// 'taxonomies'            => array( ),
 		'hierarchical'          => true,
 		'public'                => true,
 		'show_ui'               => true,
@@ -162,7 +162,7 @@ function variedades_post_type() {
 		'description'           => __( 'Variedades para mostrar en el sitio web', 'nboutique' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'thumbnail', 'revisions' ),
-		'taxonomies'            => array( 'category', 'post_tag' ),
+		// 'taxonomies'            => array(  ),
 		'hierarchical'          => true,
 		'public'                => true,
 		'show_ui'               => true,
@@ -219,7 +219,7 @@ function servicios_post_type() {
 		'description'           => __( 'Servicios para mostar en el sitio web', 'nboutique' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'revisions' ),
-		'taxonomies'            => array(  ),
+		// 'taxonomies'            => array(  ),
 		'hierarchical'          => true,
 		'public'                => true,
 		'show_ui'               => true,
@@ -276,8 +276,8 @@ function equipo_post_type() {
 		'label'                 => __( 'Miembro del Equipo', 'nboutique' ),
 		'description'           => __( 'Equipo de Viveros El Maitén para mostrar en el sitio web', 'nboutique' ),
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
-		'taxonomies'            => array( 'category', 'post_tag' ),
+		'supports'              => array( 'title', 'thumbnail' ),
+		// 'taxonomies'            => array(  ),
 		'hierarchical'          => true,
 		'public'                => true,
 		'show_ui'               => true,
@@ -287,7 +287,7 @@ function equipo_post_type() {
 		'show_in_admin_bar'     => false,
 		'show_in_nav_menus'     => true,
 		'can_export'            => true,
-		'has_archive'           => true,
+		'has_archive'           => false,
 		'exclude_from_search'   => true,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
@@ -296,3 +296,65 @@ function equipo_post_type() {
 
 }
 add_action( 'init', 'equipo_post_type', 0 );
+
+
+
+
+
+// Diapositivas Post Type
+// Register Custom Post Type
+function diapos_post_type() {
+
+	$labels = array(
+		'name'                  => _x( 'Diapositivas', 'Post Type General Name', 'nboutique' ),
+		'singular_name'         => _x( 'Diapositiva', 'Post Type Singular Name', 'nboutique' ),
+		'menu_name'             => __( 'Diapositivas', 'nboutique' ),
+		'name_admin_bar'        => __( 'Diapositiva', 'nboutique' ),
+		'archives'              => __( 'Archivos', 'nboutique' ),
+		'attributes'            => __( 'Atributos', 'nboutique' ),
+		'parent_item_colon'     => __( 'Diapositiva Padre:', 'nboutique' ),
+		'all_items'             => __( 'Todas las Diapositivas', 'nboutique' ),
+		'add_new_item'          => __( 'Añadir Nueva Diapositiva', 'nboutique' ),
+		'add_new'               => __( 'Añadir Nueva', 'nboutique' ),
+		'new_item'              => __( 'Nueva Diapositiva', 'nboutique' ),
+		'edit_item'             => __( 'Editar Diapositiva', 'nboutique' ),
+		'update_item'           => __( 'Actualizar Diapositiva', 'nboutique' ),
+		'view_item'             => __( 'Ver Diapositiva', 'nboutique' ),
+		'view_items'            => __( 'Ver Diapositivas', 'nboutique' ),
+		'search_items'          => __( 'Buscar Diapositiva', 'nboutique' ),
+		'not_found'             => __( 'No encontrada', 'nboutique' ),
+		'not_found_in_trash'    => __( 'Nada encontrado en papelera', 'nboutique' ),
+		'featured_image'        => __( 'Imagen de fondo', 'nboutique' ),
+		'set_featured_image'    => __( 'Agregar fondo', 'nboutique' ),
+		'remove_featured_image' => __( 'Eliminar imagen de fondo', 'nboutique' ),
+		'use_featured_image'    => __( 'Usar como fondo', 'nboutique' ),
+		'insert_into_item'      => __( 'Insertar', 'nboutique' ),
+		'uploaded_to_this_item' => __( 'Actualizar', 'nboutique' ),
+		'items_list'            => __( 'Lista de Diapositivas', 'nboutique' ),
+		'items_list_navigation' => __( 'Recorrer Diapositivas', 'nboutique' ),
+		'filter_items_list'     => __( 'Filtrar', 'nboutique' ),
+	);
+	$args = array(
+		'label'                 => __( 'Diapositiva', 'nboutique' ),
+		'description'           => __( 'Diapositivas para la sección de inicio del sitio web', 'nboutique' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'thumbnail' ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'menu_icon'             => 'dashicons-diapositivas',
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => false,
+		'exclude_from_search'   => true,
+		'publicly_queryable'    => true,
+		'rewrite'               => false,
+		'capability_type'       => 'page',
+	);
+	register_post_type( 'diapositivas', $args );
+
+}
+add_action( 'init', 'diapos_post_type', 0 );

@@ -72,7 +72,7 @@ a
     padding: 12px 26px
     &:hover
 
-@media (min-width: 1024px)
+@media (min-width: 900px)
   .btn
     // font-size: 15px
     padding: 13px 26px
@@ -104,6 +104,10 @@ a
 @media (min-width: 1400px)
   .width
     max-width: 1040px
+
+@media (min-width: 1600px)
+  .width
+    max-width: 1100px
 
 // @media (min-width: 1600px)
 //   .width
@@ -273,29 +277,144 @@ header.site-header
         &.toggle-menu
 
 //Slider
-.slider
+.glide
   width: 100%
-  height: 320px
-  background: $green
+  height: 360px
+  // background: $green
+  position: relative
+  text-align: center
+  display: flex
+  .glide__track
+    height: 100%
+    .glide__slides
+      height: 100%
+      margin: 0
+      .glide__slide
+        display: flex
+        position: relative
+        justify-content: center
+        align-items: center
+        background-size: cover
+        background-position: center
+        background-repeat: no-repeat
+        flex-wrap: wrap
+        flex-direction: column
+        color: white
+        h1
+          margin: 0
+          z-index: 10
+          margin-bottom: 6px
+        .the-content
+          color: white
+          z-index: 10
+          margin-bottom: 12px
+          p, li, a, h1, h2, h3, h4, h5, h6, span
+            color: white
+        &::after
+          content: ''
+          position: absolute
+          background: rgba(black, 0.4)
+          top: 0
+          width: 100%
+          height: 100%
+          bottom: 0
+          left: 0
+          right: 0
+          margin: auto
+          z-index: 1
+        .btn
+          z-index: 10
+  .glide__arrows
+    .glide__arrow
+      cursor: pointer
+      font-family: "viveros-el-maiten-front"
+      background: transparent
+      box-shadow: none
+      appearance: none
+      border: none
+      color: rgba(white, 0.6)
+      outline: none
+      font-size: 20px
+    .glide__arrow--left
+      position: absolute
+      top: 0
+      left: 2px
+      bottom: 0
+    .glide__arrow--right
+      position: absolute
+      top: 0
+      right: 2px
+      bottom: 0
+  .glide__bullets
+    position: absolute
+    bottom: 20px
+    left: 0
+    right: 0
+    margin: auto
+    .glide__bullet
+      cursor: pointer
+      width: 12px
+      height: 12px
+      border-radius: 100px
+      outline: none
+      margin: 0
+      padding: 0
+      margin: 0 2px
+      box-shadow: none
+      background: rgba(white, 0.6)
+      border: none
+      appearance: none
 
 @media (min-width: 768px)
-  .slider
+  .glide
     height: 400px
 
 @media (min-width: 900px)
-  .slider
+  .glide
     height: 460px
+    .glide__track
+      .glide__slides
+        .glide__slide
+          h1
+            font-size: 38px
+          .the-content
+            p, li, a, h1, h2, h3, h4, h5, h6, span
+              font-size: 18px
+              margin-bottom: 23px
+          &::after
+    .glide__arrows
+      .glide__arrow
+      .glide__arrow--left
+      .glide__arrow--right
+    .glide__bullets
+      .glide__bullet
 
 @media (min-width: 1200px)
-  .slider
+  .glide
     height: 480px
+    .glide__track
+      .glide__slides
+        .glide__slide
+          h1
+            font-size: 42px
+          .the-content
+            p, li, a, h1, h2, h3, h4, h5, h6, span
+              font-size: 18px
+              margin-bottom: 23px
+          &::after
+    .glide__arrows
+      .glide__arrow
+      .glide__arrow--left
+      .glide__arrow--right
+    .glide__bullets
+      .glide__bullet
 
 @media (min-width: 1400px)
-  .slider
+  .glide
     height: 510px
 
 @media (min-width: 1600px)
-  .slider
+  .glide
     height: 550px
 
 //Products Select
@@ -330,6 +449,11 @@ header.site-header
       &:hover
         .back
           opacity: 0.3
+  &.porta-items
+    padding: 0
+    .item
+      margin: 0
+      margin-bottom: 1.5em
 
 @media (min-width: 768px)
   .products-select
@@ -408,9 +532,9 @@ header.site-header
 
 //Service Showcase
 .showcase-service
+  padding-top: 2.7em
+  padding-bottom: 3.7em
   .showcase-service-item
-    padding-top: 2.7em
-    padding-bottom: 3.7em
     .img
       width: 100%
       height: 300px
@@ -431,9 +555,15 @@ header.site-header
         margin-bottom: 36px
   &.with-background
     background-color: $gray
+    padding-top: 2.7em
+    padding-bottom: 3.7em
+  &.no-pd-top
+    padding-top: 0.8em
 
 @media (min-width: 768px)
   .showcase-service
+    padding-top: 4em
+    padding-bottom: 4.5em
     .showcase-service-item
       box-sizing: border-box
       padding-top: 0
@@ -442,8 +572,6 @@ header.site-header
       justify-content: space-between
       align-items: center
       align-content: center
-      padding-top: 4em
-      padding-bottom: 4.5em
       .img
         width: 39%
         height: 320px
@@ -457,6 +585,8 @@ header.site-header
           p
             margin-bottom: 0
     &.with-background
+      padding-top: 4em
+      padding-bottom: 4.5em
       .img
         order: 2
       .data
@@ -464,9 +594,9 @@ header.site-header
 
 @media (min-width: 900px)
   .showcase-service
+    padding-top: 5em
+    padding-bottom: 5.5em
     .showcase-service-item
-      padding-top: 5em
-      padding-bottom: 5.5em
       .img
         height: 420px
       .data
@@ -478,6 +608,8 @@ header.site-header
           margin-bottom: 40px
           width: 90%
     &.with-background
+      padding-top: 5em
+      padding-bottom: 5.5em
       .img
       .data
 
@@ -488,6 +620,7 @@ header.site-header
         height: 450px
       .data
         h3
+          width: 88%
           font-size: 42px
           margin-bottom: 26px
         p
@@ -524,7 +657,7 @@ header.site-header
 
 //Analisis
 .analisis
-  background: $gray
+  background: #E5E5E5
   box-sizing: border-box
   padding-top: 5em
   padding-bottom: 5em
@@ -537,6 +670,7 @@ header.site-header
       margin-bottom: 23px
     p
       margin-bottom: 34px
+      line-height: 140%
     .logos
       display: flex
       justify-content: space-between
@@ -620,6 +754,8 @@ header.site-header
     padding-bottom: 1.7em
     img
       width: 100%
+    &.no-pd-top
+      padding-top: 0
 
 @media (min-width: 768px)
   .single-img
@@ -655,7 +791,14 @@ header.site-header
   .equipo-img
     .equipo-img-inner
       // padding-top: 3em
-      padding-bottom: 3em
+      padding-bottom: 2.8em
+      img
+
+@media (min-width: 1200px)
+  .equipo-img
+    .equipo-img-inner
+      // padding-top: 3em
+      padding-bottom: 3.5em
       img
 
 //Footer
@@ -850,7 +993,7 @@ header.site-header
     width: 80%
     margin-left: auto
     margin-right: auto
-    padding: 50px 0 42px
+    padding: 50px 0 46px
     h6
       @include sans
       font-size: 11px
@@ -873,7 +1016,7 @@ header.site-header
 @media (min-width: 768px)
   .header-page
     .header-page-inner
-      padding: 72px 0 46px
+      padding: 72px 0 58px
       width: 60%
       h6
       h3
@@ -883,7 +1026,7 @@ header.site-header
   .header-page
     .header-page-inner
       width: 40%
-      padding: 77px 0 58px
+      padding: 77px 0 66px
       h6
       h3
         font-size: 38px
@@ -893,7 +1036,7 @@ header.site-header
   .header-page
     .header-page-inner
       // width: 40%
-      padding: 77px 0 62px
+      padding: 78px 0 72px
       h6
         font-size: 13px
         margin-bottom: 13px
@@ -971,9 +1114,6 @@ header.site-header
                 b, strong
                   font-weight: 700
 
-
-
-
 @media (min-width: 768px)
   .plantas-items
     .plantas-items-inner
@@ -982,6 +1122,7 @@ header.site-header
         justify-content: space-between
         flex-wrap: wrap
         align-items: center
+        margin-bottom: 38px
         .img
           width: 40%
           height: 340px
@@ -994,15 +1135,15 @@ header.site-header
             .item
               p, b
 
-@media (min-width: 1024px)
+@media (min-width: 900px)
   .plantas-items
     .plantas-items-inner
       .item
         .img
-          width: 35%
+          width: 37%
           height: 380px
         .data
-          width: 59%
+          width: 56%
           h4
             font-size: 32px
           h6
@@ -1033,11 +1174,12 @@ header.site-header
   .plantas-items
     .plantas-items-inner
       .item
+        margin-bottom: 44px
         .img
-          width: 33%
-          height: 400px
+          width: 36%
+          height: 430px
         .data
-          width: 60%
+          width: 57%
           h4
           h6
           p
@@ -1071,7 +1213,7 @@ header.site-header
             p
               margin: 0
               font-size: 16px
-              line-height: 20px
+              line-height: 22px
               &:first-child
                 margin-right: 6px
                 // width: 20%
@@ -1086,26 +1228,28 @@ header.site-header
       grid-gap: 1em
       justify-content: space-between
       .item
-        margin-bottom: 18px
+        margin-bottom: 26px
         .img
           height: 380px
+          margin-bottom: 4px
         .data
           h4
           .specific
             .item
               p
 
-@media (min-width: 1024px)
+@media (min-width: 900px)
   .var-items
     .var-items-inner
       padding-bottom: 40px
-      grid-template-columns: repeat(auto-fill, 31.5%)
+      grid-template-columns: repeat(auto-fill, 31.1%)
       .item
-        margin-bottom: 18px
+        // margin-bottom: 32px
         .img
           height: 350px
         .data
           h4
+            margin-bottom: 22px
           .specific
             .item
               margin-bottom: 4px
@@ -1118,7 +1262,9 @@ header.site-header
 @media (min-width: 1200px)
   .var-items
     .var-items-inner
+      grid-template-columns: repeat(auto-fill, 30.8%)
       .item
+        margin-bottom: 36px
         .img
         .data
           h4
@@ -1133,15 +1279,11 @@ header.site-header
 .equipo
   .equipo-inner
     padding-top: 6px
+    padding-bottom: 24px
     .item
-      margin-bottom: 26px
-      .img
-        width: 100%
-        height: 350px
-        background-position: center
-        background-size: cover
+      margin-bottom: 34px
       .data
-        padding: 20px 0
+        // padding: 20px 0
         h4
           width: 80%
           font-size: 26px
@@ -1157,7 +1299,7 @@ header.site-header
           font-size: 15px
           margin-bottom: 0px
         .contact
-          padding-top: 18px
+          padding-top: 12px
           background: transparent
           a
             color: $blue-dark
@@ -1173,15 +1315,13 @@ header.site-header
       flex-wrap: wrap
       .item
         width: 47%
-        .img
-          height: 410px
         .data
           h4
           h6
           .contact
             a
 
-@media (min-width: 1024px)
+@media (min-width: 900px)
   .equipo
     // padding-bottom: 28px
     .equipo-inner
@@ -1192,12 +1332,10 @@ header.site-header
       .item
         // width: 32%
         width: 100%
-        .img
-          width: 100%
-          height: 360px
         .data
           width: 100%
           h4
+            font-size: 30px
           h6
           .contact
             a
@@ -1206,16 +1344,20 @@ header.site-header
   .equipo
     .equipo-inner
       .item
-        .img
+        // margin-bottom: 36px
         .data
           h4
-            font-size: 28px
-            margin-bottom: 10px
+            // font-size: 30px
+            margin-bottom: 14px
+            width: 100%
           h6
-            font-size: 16px
+            font-size: 17px
           .contact
-            padding-top: 22px
+            padding-top: 16px
+            // padding-top: 22px
             a
+              font-size: 17px
+              font-weight: 300
 
 // CTA
 .cta
@@ -1238,7 +1380,8 @@ header.site-header
       color: $blue-dark
       margin-bottom: 12px
     h1
-      font-size: 30px
+      font-size: 32px
+      line-height: 127%
       margin: 0
       color: $brown
       margin-bottom: 18px
@@ -1246,7 +1389,7 @@ header.site-header
       margin: 0
       color: $blue-dark
       font-size: 15px
-      line-height: 20px
+      line-height: 140%
       margin-bottom: 32px
 
 @media (min-width: 768px)
@@ -1259,19 +1402,20 @@ header.site-header
       margin-right: auto
       h6
       h1
-        font-size: 32px
+        // font-size: 32px
       p
         font-size: 16px
         margin-bottom: 38px
 
-@media (min-width: 1024px)
+@media (min-width: 900px)
   .cta
     .cta-inner
       padding-top: 90px
       padding-bottom: 96px
+      width: 70%
       h6
       h1
-        font-size: 34px
+        font-size: 38px
         margin-bottom: 20px
       p
         font-size: 17px
@@ -1280,10 +1424,10 @@ header.site-header
 @media (min-width: 1200px)
   .cta
     .cta-inner
-      width: 40%
+      width: 50%
       h6
       h1
-        font-size: 36px
+        font-size: 42px
         margin-bottom: 24px
       p
         font-size: 18px
@@ -1395,7 +1539,7 @@ header.site-header
             button
               &:focus, &:hover
 
-@media (min-width: 1024px)
+@media (min-width: 900px)
   .contact
     .contact-inner
       display: flex
@@ -1446,7 +1590,10 @@ header.site-header
         .item
           margin-bottom: 30px
           h6
+            margin-bottom: 12px
           p
+            font-size: 18px
+            line-height: 140%
             b
             a
           &:last-child
@@ -1482,7 +1629,7 @@ header.site-header
       width: 100%
       height: 300px
 
-@media (min-width: 1024px)
+@media (min-width: 900px)
   .map
     .gmap_canvas
       height: 380px
@@ -1496,6 +1643,154 @@ header.site-header
       height: 420px
       #gmap_canvas
         height: 420px
+
+.visibility
+  opacity: 1 !important
+  visibility: visible !important
+
+// Detalles
+.details-wrapper
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background: rgba(black, 0.3)
+  z-index: 999999
+  width: 100%
+  height: 100%
+  margin: auto
+  visibility: hidden
+  opacity: 0
+  transition: all ease 0.3s
+  .details
+    width: 90vw
+    height: 84vh
+    background: $gray
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    margin: auto
+    .close
+      position: absolute
+      right: 22px
+      margin: auto
+      top: 22px
+      width: 24px
+      cursor: pointer
+    .details-inner
+      display: flex
+      flex-wrap: wrap
+      width: 100%
+      height: 100%
+      overflow: hidden
+      .img
+        width: 100%
+        height: 30%
+        background-position: center
+        background-size: cover
+        background-repeat: no-repeat
+      .data
+        width: 100%
+        height: 70%
+        overflow: scroll
+        padding: 30px 32px
+        box-sizing: border-box
+        h1
+          color: $brown
+          margin: 0
+          margin-bottom: 22px
+        .item
+          color: $blue-dark
+          margin-bottom: 26px
+          h6
+            margin: 0
+            color: $green
+            @include sans
+            font-weight: 700
+            font-size: 16px
+            margin-bottom: 6px
+          p
+            margin: 0
+            font-size: 16px
+            font-weight: 300
+            line-height: 140%
+            margin-bottom: 2px
+            b
+              font-weight: 700
+          // &:last-child
+          //   margin-bottom: 70px
+
+@media (min-width: 768px)
+  .details-wrapper
+    .details
+      width: 70vw
+      height: 74vh
+      .close
+        width: 30px
+        top: 28px
+        right: 26px
+      .details-inner
+        display: flex
+        .img
+          height: 35%
+        .data
+          padding: 38px 40px
+          height: 65%
+          h1
+            margin-bottom: 30px
+          .item
+            // &:last-child
+            //   margin-bottom: 20px
+
+@media (min-width: 900px)
+  .details-wrapper
+    .details
+      width: 76vw
+      height: 70vh
+      .close
+      .details-inner
+        display: flex
+        flex-wrap: nowrap
+        .img
+          width: 40%
+          height: 100%
+        .data
+          width: 60%
+          height: 100%
+          padding: 45px 44px
+
+@media (min-width: 1200px)
+  .details-wrapper
+    .details
+      width: 65vw
+      height: 76vh
+      max-width: 900px
+      max-height: 640px
+      .close
+        width: 32px
+        top: 32px
+        right: 32px
+      .details-inner
+        display: flex
+        flex-wrap: nowrap
+        .img
+          width: 40%
+          height: 100%
+        .data
+          width: 60%
+          height: 100%
+          padding: 47px 54px
+          h1
+            font-size: 38px
+            margin-bottom: 32px
+          .item
+            h6
+            p
+              b
+
 //
 //
 //

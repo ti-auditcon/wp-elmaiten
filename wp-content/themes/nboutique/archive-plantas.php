@@ -52,29 +52,6 @@ get_header();
 		<?php endwhile; else : ?>
 		<?php endif; ?>
 
-		<!-- <div class="item">
-			<div class="img" style="background-image: url('/img/green.jpg')"></div>
-			<div class="data">
-				<h4>Planta terminada</h4>
-				<h6>Raíz Desnuda</h6>
-				<p>In hac habitasse platea dictumst. Donec commodo erat sit amet porttitor egestas. Donec eget feugiat tortor.</p>
-				<div class="features">
-					<div class="item">
-						<p><b>Tipo A</b></p>
-						<p>Más de 1,60 Mts de altura</p>
-					</div>
-					<div class="item">
-						<p><b>Tipo B</b></p>
-						<p>De 1,40 a 1,60 Mts de altura</p>
-					</div>
-					<div class="item">
-						<p><b>Tipo C</b></p>
-						<p>Menos de 1,40 Mts de altura</p>
-					</div>
-				</div>
-			</div>
-		</div> -->
-
 	</div>
 </section>
 

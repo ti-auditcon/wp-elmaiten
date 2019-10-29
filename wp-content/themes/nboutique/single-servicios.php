@@ -41,12 +41,12 @@ get_header();
 		$texto3 = rwmb_meta( 'textarea_3' );
 ?>
 
-<div class="showcase-service">
+<div class="showcase-service no-pd-top">
 	<div class="showcase-service-item width">
 		<div class="img" style="background-image: url('<?php echo $image1 ?>')"></div>
 		<div class="data no-button">
 			<h3><?php echo $titulo1; ?></h3>
-			<p><?php echo $texto1; ?></p>
+			<p><?php echo strip_tags($texto1); ?></p>
 		</div>
 	</div>
 </div>
@@ -54,9 +54,12 @@ get_header();
 <div class="showcase-service with-background">
 	<div class="showcase-service-item width">
 		<div class="img" style="background-image: url('<?php echo $image2 ?>')"></div>
-		<div class="data no-button">
+		<div class="data">
 			<h3><?php echo $titulo2; ?></h3>
-			<p><?php echo $texto2; ?></p>
+			<p><?php echo strip_tags($texto2); ?></p>
+			<a href="/servicios/post-venta/" class="btn">
+				Más Información
+			</a>
 		</div>
 	</div>
 </div>
@@ -66,10 +69,24 @@ get_header();
 		<div class="img" style="background-image: url('<?php echo $image3 ?>')"></div>
 		<div class="data no-button">
 			<h3><?php echo $titulo3; ?></h3>
-			<p><?php echo $texto3; ?></p>
+			<p><?php echo strip_tags($texto3); ?></p>
 		</div>
 	</div>
 </div>
+
+<section class="analisis">
+	<div class="analisis-inner width">
+		<h3>Antecedentes de nuestras plantas</h3>
+		<p>
+			Etiam semper rhoncus diam, et gravida massa volutpat id. In tempus nunc in purus tristique commodo.
+		</p>
+		<div class="logos">
+			<img src="<?php bloginfo('template_url') ?>/img/analisis-fitopatologico.png" alt="">
+			<img src="<?php bloginfo('template_url') ?>/img/analisis-sag.png" alt="">
+			<img src="<?php bloginfo('template_url') ?>/img/analisis-suelo.png" alt="">
+		</div>
+	</div>
+</section>
 
 <div class="cta">
 	<div class="cta-inner width">

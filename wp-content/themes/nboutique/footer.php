@@ -32,10 +32,9 @@
 					<a href="/variedades">Variedades</a>
 				</div>
 				<div>
-					<h5>El Servicio</h5>
-					<a href="#">Acompañamiento en la Venta</a>
+					<h5>Servicio</h5>
+					<a href="#">Trabajemos Juntos</a>
 					<a href="#">Post Venta</a>
-					<a href="#">Instrucciones</a>
 				</div>
 			</div>
 			<!-- Datos -->

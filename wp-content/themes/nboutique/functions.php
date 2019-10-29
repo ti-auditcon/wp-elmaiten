@@ -124,9 +124,12 @@ function nboutique_scripts() {
 	wp_enqueue_style( 'nboutique-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'gfonts', 'https://fonts.googleapis.com/css?family=Lato:300,400,700|Playfair+Display:700,700i&display=swap', false );
 	wp_enqueue_style( 'hamburgers', get_template_directory_uri() . '/css/hamburgers.css', false );
+	wp_enqueue_style( 'glide-core', get_template_directory_uri() . '/css/glide.core.min.css', false );
+	wp_enqueue_style( 'front-icons', get_template_directory_uri() . '/dashicons/front/styles.css', false );
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'nboutique-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 	wp_enqueue_script( 'nboutique-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'glide-js', get_template_directory_uri() . '/js/glide.min.js', array('jquery'), '1.0', true );
 	wp_enqueue_script( 'nboutique-js', get_template_directory_uri() . '/js/script.js', array('jquery'), '1.0', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -195,6 +198,7 @@ function wpse_custom_menu_order( $menu_ord ) {
         'edit.php?post_type=variedades', // Variedades
         'edit.php?post_type=servicios', // Servicios
         'edit.php?post_type=equipo', // Equipo
+        'edit.php?post_type=diapositivas', // Equipo
 				'separator1', // separator
 
 				'edit.php?post_type=page', // Pages

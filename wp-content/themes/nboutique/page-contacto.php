@@ -30,14 +30,10 @@ get_header();
 					<b>Lunes a Viernes</b><br>
 					09:00 a 17:00 hrs
 				</p>
-				<p>
-					<b>Sábados</b><br>
-					09:00 a 13:00 hrs
-				</p>
 			</div>
 		</div>
 		<div class="contact-form">
-			<?php echo do_shortcode('[wpforms id="51" title="false" description="false"]') ?>
+			<?php echo do_shortcode('[wpforms id="71" title="false" description="false"]') ?>
 		</div>
 	</div>
 </div>
